@@ -1,18 +1,68 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-		'Droid Sans', 'Helvetica Neue', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 * {
-	box-sizing: border-box;
-	overflow: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.github-wrapper {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 2;
+  overflow: hidden;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.github-wrapper a {
+  text-decoration: none;
+}
+
+.github span {
+  position: relative;
+  z-index: 2;
+}
+.github {
+  position: relative;
+  font-size: 15px;
+  color: #fefefe;
+}
+@media screen and (max-width: 750px) {
+  .github {
+    font-size: 20px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .github:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background: #313131;
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+    z-index: 1;
+  }
+  .github:hover:before {
+    width: 80px;
+    height: 80px;
+  }
 }
